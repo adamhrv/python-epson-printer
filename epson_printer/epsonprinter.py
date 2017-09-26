@@ -207,7 +207,7 @@ class EpsonPrinter:
         return wrapper
 
     def write_bytes(self, byte_array):
-        msg = ''.join([chr(b) for b in byte_array])
+        msg = bytearray(byte_array)
         self.write(msg)
 
     def write(self, msg):
